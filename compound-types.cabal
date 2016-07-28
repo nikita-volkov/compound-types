@@ -1,7 +1,7 @@
 name:
   compound-types
 version:
-  0.1.0.1
+  0.1.1
 category:
   Data, Types, Type System
 synopsis:
@@ -48,8 +48,11 @@ library
     CompoundTypes.Private.Prelude
     CompoundTypes.Private.Strict.Sum
     CompoundTypes.Private.Strict.Product
+    CompoundTypes.Private.Lazy.Sum
+    CompoundTypes.Private.Lazy.Product
   exposed-modules:
     CompoundTypes.Strict
+    CompoundTypes.Lazy
   build-depends:
     -- general:
     base-prelude < 2,
