@@ -5,7 +5,7 @@ import CompoundTypes.Strict
 
 
 main =
-  error "This demonstration is all about the compilability"
+  putStrLn "This demonstration is all about the compilability"
 
 -- |
 -- Same as the following type: 

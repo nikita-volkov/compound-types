@@ -1,7 +1,7 @@
 name:
   compound-types
 version:
-  0.1
+  0.1.0.1
 category:
   Data, Types, Type System
 synopsis:
@@ -56,7 +56,11 @@ library
     base >= 4.6 && < 4.10
 
 
-executable demo
+-- Not a benchmark really.
+-- Just a work-around for Cabal issues.
+benchmark demo
+  type:
+    exitcode-stdio-1.0
   hs-source-dirs:
     demo
   main-is:
