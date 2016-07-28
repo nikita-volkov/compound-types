@@ -43,7 +43,10 @@ library
     Haskell2010
   other-modules:
     CompoundTypes.Private.Prelude
+    CompoundTypes.Private.Strict.Sum
+    CompoundTypes.Private.Strict.Product
   exposed-modules:
+    CompoundTypes.Strict
   build-depends:
     -- general:
     base-prelude < 2,
