@@ -6,6 +6,9 @@ category:
   Data, Types, Type System
 synopsis:
   Sum and Product types and such
+description:
+  This package provides scalable composite types with neat syntax.
+  Additionally it provides the strict data-structures.
 homepage:
   https://github.com/nikita-volkov/compound-types 
 bug-reports:
