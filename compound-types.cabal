@@ -1,7 +1,7 @@
 name:
   compound-types
 version:
-  0.1.1
+  0.1.1.1
 category:
   Data, Types, Type System
 synopsis:
@@ -56,7 +56,7 @@ library
   build-depends:
     -- general:
     base-prelude < 2,
-    base >= 4.6 && < 4.10
+    base >= 4.7 && < 4.10
 
 
 -- Not a benchmark really.
