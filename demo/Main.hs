@@ -8,23 +8,20 @@ main =
   putStrLn "This demonstration is all about the compilability"
 
 -- |
--- Same as the following type: 
+-- This function exhibits the benefit of the first-class sum-type
+-- being usable as a function parameter.
 -- 
--- > Sum3 Int Char Bool
-type IntCharBoolSum =
-  Int + Char + Bool
-
--- |
--- How it can be pattern-matched
-intCharBoolSumToText :: IntCharBoolSum -> String
-intCharBoolSumToText =
+-- It also shows, how we can pattern-match it.
+intCharBoolSumToString :: Int + Char + Bool -> String
+intCharBoolSumToString =
   \case
     Sum3_1 int -> "Int: " <> show int
     Sum3_2 char -> "Char: " <> show char
     Sum3_3 bool -> "Bool: " <> show bool
 
 -- |
--- Same as the following type:
+-- Following is an example of a more complicated composition,
+-- which is the same as the following type:
 -- 
 -- > Sum3 Int (Product2 Char (Sum2 Bool String)) Char
 -- 
