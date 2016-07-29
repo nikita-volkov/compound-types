@@ -1,23 +1,23 @@
 module CompoundTypes.Private.Strict.Product where
 
 
-data Product2 v1 v2 =
-  Product2 !v1 !v2
+data Product2 _1 _2 =
+  Product2 !_1 !_2
 
-data Product3 v1 v2 v3 =
-  Product3 !v1 !v2 !v3
+data Product3 _1 _2 _3 =
+  Product3 !_1 !_2 !_3
 
-data Product4 v1 v2 v3 v4 =
-  Product4 !v1 !v2 !v3 !v4
+data Product4 _1 _2 _3 _4 =
+  Product4 !_1 !_2 !_3 !_4
 
-data Product5 v1 v2 v3 v4 v5 =
-  Product5 !v1 !v2 !v3 !v4 !v5
+data Product5 _1 _2 _3 _4 _5 =
+  Product5 !_1 !_2 !_3 !_4 !_5
 
-data Product6 v1 v2 v3 v4 v5 v6 =
-  Product6 !v1 !v2 !v3 !v4 !v5 !v6
+data Product6 _1 _2 _3 _4 _5 _6 =
+  Product6 !_1 !_2 !_3 !_4 !_5 !_6
 
-data Product7 v1 v2 v3 v4 v5 v6 v7 =
-  Product7 !v1 !v2 !v3 !v4 !v5 !v6 !v7
+data Product7 _1 _2 _3 _4 _5 _6 _7 =
+  Product7 !_1 !_2 !_3 !_4 !_5 !_6 !_7
 
 
 -- |
@@ -29,48 +29,48 @@ data Product7 v1 v2 v3 v4 v5 v6 v7 =
 -- In that case it will resolve to:
 -- 
 -- > Product3 Int Char Bool
-type family (*) a b where
-  Product6 v1 v2 v3 v4 v5 v6 * v7 =
-    Product7 v1 v2 v3 v4 v5 v6 v7
-  Product5 v1 v2 v3 v4 v5 * Product2 v6 v7 =
-    Product7 v1 v2 v3 v4 v5 v6 v7
-  Product5 v1 v2 v3 v4 v5 * v6 =
-    Product6 v1 v2 v3 v4 v5 v6
-  Product4 v1 v2 v3 v4 * Product3 v5 v6 v7 =
-    Product7 v1 v2 v3 v4 v5 v6 v7
-  Product4 v1 v2 v3 v4 * Product2 v5 v6 =
-    Product6 v1 v2 v3 v4 v5 v6
-  Product4 v1 v2 v3 v4 * v5 =
-    Product5 v1 v2 v3 v4 v5
-  Product3 v1 v2 v3 * Product4 v4 v5 v6 v7 =
-    Product7 v1 v2 v3 v4 v5 v6 v7
-  Product3 v1 v2 v3 * Product3 v4 v5 v6 =
-    Product6 v1 v2 v3 v4 v5 v6
-  Product3 v1 v2 v3 * Product2 v4 v5 =
-    Product5 v1 v2 v3 v4 v5
-  Product3 v1 v2 v3 * v4 =
-    Product4 v1 v2 v3 v4
-  Product2 v1 v2 * Product5 v3 v4 v5 v6 v7 =
-    Product7 v1 v2 v3 v4 v5 v6 v7
-  Product2 v1 v2 * Product4 v3 v4 v5 v6 =
-    Product6 v1 v2 v3 v4 v5 v6
-  Product2 v1 v2 * Product3 v3 v4 v5 =
-    Product5 v1 v2 v3 v4 v5
-  Product2 v1 v2 * Product2 v3 v4 =
-    Product4 v1 v2 v3 v4
-  Product2 v1 v2 * v3 =
-    Product3 v1 v2 v3
-  v1 * Product6 v2 v3 v4 v5 v6 v7 =
-    Product7 v1 v2 v3 v4 v5 v6 v7
-  v1 * Product5 v2 v3 v4 v5 v6 =
-    Product6 v1 v2 v3 v4 v5 v6
-  v1 * Product4 v2 v3 v4 v5 =
-    Product5 v1 v2 v3 v4 v5
-  v1 * Product3 v2 v3 v4 =
-    Product4 v1 v2 v3 v4
-  v1 * Product2 v2 v3 =
-    Product3 v1 v2 v3
-  v1 * v2 =
-    Product2 v1 v2
+type family a * b where
+  Product6 _1 _2 _3 _4 _5 _6 * _7 =
+    Product7 _1 _2 _3 _4 _5 _6 _7
+  Product5 _1 _2 _3 _4 _5 * Product2 _6 _7 =
+    Product7 _1 _2 _3 _4 _5 _6 _7
+  Product5 _1 _2 _3 _4 _5 * _6 =
+    Product6 _1 _2 _3 _4 _5 _6
+  Product4 _1 _2 _3 _4 * Product3 _5 _6 _7 =
+    Product7 _1 _2 _3 _4 _5 _6 _7
+  Product4 _1 _2 _3 _4 * Product2 _5 _6 =
+    Product6 _1 _2 _3 _4 _5 _6
+  Product4 _1 _2 _3 _4 * _5 =
+    Product5 _1 _2 _3 _4 _5
+  Product3 _1 _2 _3 * Product4 _4 _5 _6 _7 =
+    Product7 _1 _2 _3 _4 _5 _6 _7
+  Product3 _1 _2 _3 * Product3 _4 _5 _6 =
+    Product6 _1 _2 _3 _4 _5 _6
+  Product3 _1 _2 _3 * Product2 _4 _5 =
+    Product5 _1 _2 _3 _4 _5
+  Product3 _1 _2 _3 * _4 =
+    Product4 _1 _2 _3 _4
+  Product2 _1 _2 * Product5 _3 _4 _5 _6 _7 =
+    Product7 _1 _2 _3 _4 _5 _6 _7
+  Product2 _1 _2 * Product4 _3 _4 _5 _6 =
+    Product6 _1 _2 _3 _4 _5 _6
+  Product2 _1 _2 * Product3 _3 _4 _5 =
+    Product5 _1 _2 _3 _4 _5
+  Product2 _1 _2 * Product2 _3 _4 =
+    Product4 _1 _2 _3 _4
+  Product2 _1 _2 * _3 =
+    Product3 _1 _2 _3
+  _1 * Product6 _2 _3 _4 _5 _6 _7 =
+    Product7 _1 _2 _3 _4 _5 _6 _7
+  _1 * Product5 _2 _3 _4 _5 _6 =
+    Product6 _1 _2 _3 _4 _5 _6
+  _1 * Product4 _2 _3 _4 _5 =
+    Product5 _1 _2 _3 _4 _5
+  _1 * Product3 _2 _3 _4 =
+    Product4 _1 _2 _3 _4
+  _1 * Product2 _2 _3 =
+    Product3 _1 _2 _3
+  _1 * _2 =
+    Product2 _1 _2
 
 infixl 1 *
