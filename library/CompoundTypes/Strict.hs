@@ -1,8 +1,10 @@
 -- |
--- Implementations of strict data-structures.
+-- Implementations of the strict data-structures.
 module CompoundTypes.Strict
 (
+  -- * Sum-types
   module CompoundTypes.Private.Strict.Sum,
+  -- * Product-types
   module CompoundTypes.Private.Strict.Product,
 )
 where
