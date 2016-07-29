@@ -24,7 +24,7 @@ data Product7 v1 v2 v3 v4 v5 v6 v7 =
 -- Automatically derives the product-type of the according arity
 -- from expressions such as:
 -- 
--- > (Int * Char * Bool)
+-- > Int * Char * Bool
 -- 
 -- In that case it will resolve to:
 -- 
