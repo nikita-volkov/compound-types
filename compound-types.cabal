@@ -1,14 +1,19 @@
 name:
   compound-types
 version:
-  0.1.2
+  0.1.2.1
 category:
   Data, Types, Type System
 synopsis:
   Sum and Product types and such
 description:
-  This package provides scalable composite types with neat syntax.
-  Additionally it provides the strict data-structures.
+  This library provides first-class multi-arity product- and sum-types and
+  neat type-level utilities for their composition.
+  The solution is quite simple and doesn’t require the advanced proficiency
+  in the language to be applied in practice.
+  .
+  For a comprehensive introduction please see 
+  <http://nikita-volkov.github.io/first-class-sums-and-products/ this blog post>.
 homepage:
   https://github.com/nikita-volkov/compound-types 
 bug-reports:
