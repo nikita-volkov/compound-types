@@ -1,17 +1,17 @@
 module CompoundTypes.Private.Strict.Sum where
 
 
-data Sum2 a b =
-  Sum2_1 !a | Sum2_2 !b
+data Sum2 v1 v2 =
+  Sum2_1 !v1 | Sum2_2 !v2
 
-data Sum3 a b c =
-  Sum3_1 !a | Sum3_2 !b | Sum3_3 !c
+data Sum3 v1 v2 v3 =
+  Sum3_1 !v1 | Sum3_2 !v2 | Sum3_3 !v3
 
-data Sum4 a b c d =
-  Sum4_1 !a | Sum4_2 !b | Sum4_3 !c | Sum4_4 !d
+data Sum4 v1 v2 v3 v4 =
+  Sum4_1 !v1 | Sum4_2 !v2 | Sum4_3 !v3 | Sum4_4 !v4
 
-data Sum5 a b c d e =
-  Sum5_1 !a | Sum5_2 !b | Sum5_3 !c | Sum5_4 !d | Sum5_5 !e
+data Sum5 v1 v2 v3 v4 v5 =
+  Sum5_1 !v1 | Sum5_2 !v2 | Sum5_3 !v3 | Sum5_4 !v4 | Sum5_5 !v5
 
 -- |
 -- Automatically derives the sum-type of the according arity

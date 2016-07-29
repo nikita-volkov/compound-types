@@ -1,17 +1,17 @@
 module CompoundTypes.Private.Strict.Product where
 
 
-data Product2 a b =
-  Product2 !a !b
+data Product2 v1 v2 =
+  Product2 !v1 !v2
 
-data Product3 a b c =
-  Product3 !a !b !c
+data Product3 v1 v2 v3 =
+  Product3 !v1 !v2 !v3
 
-data Product4 a b c d =
-  Product4 !a !b !c !d
+data Product4 v1 v2 v3 v4 =
+  Product4 !v1 !v2 !v3 !v4
 
-data Product5 a b c d e =
-  Product5 !a !b !c !d !e
+data Product5 v1 v2 v3 v4 v5 =
+  Product5 !v1 !v2 !v3 !v4 !v5
 
 -- |
 -- Automatically derives the product-type of the according arity
