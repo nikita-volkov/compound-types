@@ -80,4 +80,4 @@ benchmark demo
     Haskell2010
   build-depends:
     compound-types,
-    rebase >= 1 && < 2
+    base-prelude >= 1 && < 2

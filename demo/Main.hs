@@ -1,6 +1,6 @@
 module Main where
 
-import Rebase.Prelude
+import BasePrelude
 import CompoundTypes.Strict
 
 
