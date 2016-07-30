@@ -10,7 +10,7 @@ Here's an example of what you can do with it:
 -- being usable as a function parameter.
 -- 
 -- It also shows, how we can pattern-match it.
-intCharBoolSumToString :: Int + Char + Bool -> String
+intCharBoolSumToString :: (Int + Char + Bool) -> String
 intCharBoolSumToString =
   \case
     Sum3_1 int -> "Int: " <> show int
@@ -26,6 +26,17 @@ intCharBoolSumToString =
 -- Just as in the math, the product operator exhibits a higher priority.
 type SumAndProductMixture =
   Int + Char * (Bool + String) + Char
+
+-- |
+-- Where there is a multiplication and addition,
+-- there naturally must be a division and subtraction!
+-- 
+-- Following is an example of how we can extract parts of a composite type.
+-- Here the type becomes the same as the following:
+-- 
+-- > Bool + String
+type BoolOrString =
+  (SumAndProductMixture - Int - Char) / Char
 ```
 
 ## Links
