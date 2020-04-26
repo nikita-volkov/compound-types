@@ -1,4 +1,5 @@
 {-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE NoStarIsType #-}
 module CompoundTypes.Private.Lazy.Product where
 
 
@@ -30,7 +31,7 @@ data Product7 _1 _2 _3 _4 _5 _6 _7 =
 -- In that case it will resolve to:
 -- 
 -- > Product3 Int Char Bool
-type family a * b where
+type family (a * b) where
 
   Product6 _1 _2 _3 _4 _5 _6 * _7 =
     Product7 _1 _2 _3 _4 _5 _6 _7
@@ -72,7 +73,7 @@ type family a * b where
   Undivided _1 _2 * _3 =
     Undivided (_1 * _3) _2
     
-  _1 * Product6 _2 _3 _4 _5 _6 _7 =
+  (*) _1 (Product6 _2 _3 _4 _5 _6 _7) =
     Product7 _1 _2 _3 _4 _5 _6 _7
   _1 * Product5 _2 _3 _4 _5 _6 =
     Product6 _1 _2 _3 _4 _5 _6
