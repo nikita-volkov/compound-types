@@ -73,7 +73,7 @@ type family a * b where
   Undivided _1 _2 * _3 =
     Undivided (_1 * _3) _2
     
-  (*) _1 (Product6 _2 _3 _4 _5 _6 _7) =
+  _1 * Product6 _2 _3 _4 _5 _6 _7 =
     Product7 _1 _2 _3 _4 _5 _6 _7
   _1 * Product5 _2 _3 _4 _5 _6 =
     Product6 _1 _2 _3 _4 _5 _6
