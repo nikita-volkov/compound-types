@@ -12,6 +12,9 @@ description:
   The solution is quite simple and doesn’t require the advanced proficiency
   in the language to be applied in practice.
   .
+  The library supports GHC starting from version 8.6.1 and
+  requires you to enable the @NoStarIsType@ extension.
+  .
   For a comprehensive introduction please see 
   <http://nikita-volkov.github.io/first-class-sums-and-products/ this blog post>.
 homepage:

@@ -1,3 +1,4 @@
+{-# LANGUAGE NoStarIsType #-}
 module Main where
 
 import BasePrelude
