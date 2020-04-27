@@ -1,4 +1,5 @@
 {-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE NoStarIsType #-}
 module CompoundTypes.Private.Strict.Product where
 
 

@@ -39,6 +39,10 @@ type BoolOrString =
   (SumAndProductMixture - Int - Char) / Char
 ```
 
+## Compatibility
+
+The library supports GHC starting from version 8.6.1 and requires you to enable the `NoStarIsType` extension.
+
 ## Links
 
 * [On Hackage](http://hackage.haskell.org/package/compound-types)

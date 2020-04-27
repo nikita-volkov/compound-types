@@ -1,4 +1,5 @@
 {-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE NoStarIsType #-}
 module CompoundTypes.Private.Lazy.Product where
 
 
